@@ -10,13 +10,13 @@ export default function Main() {
 
   return (
     <div>
-     <Settings> 
-        <Header />
+     {/* <Settings>  */}
+        {/* <Header /> */}
         <Todo/>
         <List/>
         <Demo/>
         <Footer/>
-     </Settings>
+     {/* </Settings> */}
     </div>
   )
 }
