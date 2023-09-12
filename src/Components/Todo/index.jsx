@@ -21,8 +21,8 @@ const Todo = () => {
   // }
 
   // function deleteItem(id) {
-  //   const items = list.filter( item => item.id !== id );
-  //   setList(items);
+  //   const items = context.final.filter( item => item.id !== id );
+  //   context.setFinal(items);
   // }
 
   // function toggleComplete(id) {
@@ -40,7 +40,6 @@ const Todo = () => {
   useEffect(() => {
     let incompleteCount = context.state.filter(item => !item.completed).length;
     let incompleteHide = context.state.filter(item => item.completed);
-    console.log(context.state);
     context.setIncomplete(incompleteCount);
     document.title = `To Do List: ${context.incomplete}`;
 

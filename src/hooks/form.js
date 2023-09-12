@@ -1,12 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react'
+;
+import { LoginContext } from '../context/settings/login';
 
 const useForm = (callback, defaultValues={}) => {
+  const {capabilities} = useContext(LoginContext)
 
   const [values, setValues] = useState({});
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    callback({...values});
+    if (capabilities.includes('create')) callback({...values});
+    
   };
 
   const handleChange = (event) => {

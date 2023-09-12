@@ -5,11 +5,13 @@ import Main from './Main';
 import SettingsPage from './Components/Settings/SettingsPage';
 import Settings from './context/settings/settings';
 import Header from './Components/Header/Header';
+import Login, { LoginContext } from './context/settings/login';
 
 export default class App extends  React.Component {
   render() {
     return (
       <>
+        <Login>
         <Settings>
          <Header />
             <Routes>
@@ -17,6 +19,8 @@ export default class App extends  React.Component {
                 <Route path='/settings' element ={<SettingsPage/>}/>
             </Routes>
           </Settings>
+          </Login>
+
       </>
     );
   }
